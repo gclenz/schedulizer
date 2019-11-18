@@ -8,5 +8,8 @@ An app for those providers who need a way to sell their services based on time b
 - Prettier
 - Sequelize (PostgreSQL)
 - Mongoose (MongoDB)
+- Nodemailer
 - Bee Queue (Redis)
 - Date-fns
+- Bcrypt.js
+- JWT
