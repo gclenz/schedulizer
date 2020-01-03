@@ -5,6 +5,7 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 
 import Dashboard from './pages/Dashboard';
+import Profile from './pages/Profile';
 
 export default (signedIn = false) =>
   createAppContainer(
@@ -14,9 +15,20 @@ export default (signedIn = false) =>
           SignIn,
           SignUp,
         }),
-        App: createBottomTabNavigator({
-          Dashboard,
-        }),
+        App: createBottomTabNavigator(
+          {
+            Dashboard,
+            Profile,
+          },
+          {
+            tabBarOptions: {
+              keyboardHidesTabBar: true,
+              activeTintColor: '#ff7550',
+              inactiveTintColor: '#fff',
+              style: { backgroundColor: '#202023' },
+            },
+          }
+        ),
       },
       {
         initialRouteName: signedIn ? 'App' : 'Sign',
